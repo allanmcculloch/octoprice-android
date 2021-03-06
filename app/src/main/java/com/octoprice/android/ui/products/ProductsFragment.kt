@@ -11,7 +11,6 @@ import com.octoprice.android.R
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class ProductsFragment : Fragment() {
-
     private val productsViewModel: ProductsViewModel by viewModel()
 
     override fun onCreateView(
