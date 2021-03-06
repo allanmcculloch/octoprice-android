@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_products"
+        android:icon="@drawable/ic_power_24dp"
+        android:title="@string/title_products" />
+
+    <item
+        android:id="@+id/navigation_industry"
+        android:icon="@drawable/ic_industry_24dp"
+        android:title="@string/title_industry" />
+
+    <item
+        android:id="@+id/navigation_settings"
+        android:icon="@drawable/ic_settings_24dp"
+        android:title="@string/title_settings" />
+
+</menu>
