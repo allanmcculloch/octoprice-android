@@ -1,8 +1,8 @@
 package com.octoprice.android
 
 import com.octoprice.android.domain.model.Product
-import com.octoprice.android.network.model.product.ProductResponse
-import com.octoprice.android.network.model.product.ProductsResponse
+import com.octoprice.android.domain.model.SampleProductRates
+import com.octoprice.android.network.model.product.*
 
 object SampleData {
     val productsResponse = ProductsResponse(
@@ -85,7 +85,54 @@ object SampleData {
         )
     )
 
-    val singleProductResponse = productsResponse.products.first()
+    val singleProductResponse =
+        ProductResponse(
+            available_from = "2021-02-16T00:00:00Z",
+            available_to = null,
+            brand = "AFFECT_ENERGY",
+            code = "AFFECT-FIX-12M-21-02-16",
+            description = "This tariff features 100% renewable electricity and fixes your unit rates and standing charge for 12 months. There are no exit fees, so if you change your mind, you're in control.",
+            direction = "IMPORT",
+            display_name = "Affect 12M Fixed",
+            full_name = "Affect 12M Fixed February 2021 v1",
+            is_business = false,
+            is_green = true,
+            is_prepay = false,
+            is_restricted = true,
+            is_tracker = false,
+            is_variable = false,
+            sample_consumption = SampleConsumption(
+                DualFuelDualRate(
+                    electricity_day = 2436,
+                    electricity_night = 1764,
+                    gas_standard = 12000
+                ),
+                DualFuelSingleRate(electricity_standard = 2900, gas_standard = 12000),
+                ElectricityDualRate(electricity_day = 2436, electricity_night = 1764),
+                ElectricitySingleRate(electricity_standard = 2900)
+            ),
+            tariffs_active_at = null,
+            links = null,
+            term = 12,
+            dual_register_electricity_tariffs = DualRegisterElectricityTariffs(
+                ADualRegisterElectricity(
+                    DirectDebitMonthlyDualRegisterElectricity(
+                        day_unit_rate_inc_vat = 19.3515,
+                        night_unit_rate_inc_vat = 10.563,
+                        standing_charge_inc_vat = 24.486
+                    )
+                )
+            ),
+            single_register_electricity_tariffs = SingleRegisterElectricityTariffs(
+                ASingleRegisterElectricity(
+                    DirectDebitMonthlySingleRegisterElectricity(
+                        standard_unit_rate_inc_vat = 17.136,
+                        standing_charge_inc_vat = 24.486
+                    )
+                )
+            )
+        )
+
     val singleProduct = products.first()
     val updatedProduct =
         Product(
@@ -102,6 +149,13 @@ object SampleData {
             isRestricted = true,
             isTracker = false,
             isVariable = false,
-            term = 14
+            term = 14,
+            sampleProductRates = SampleProductRates(
+                electricitySingleRate = 2900,
+                electricityDualRateDay = 2436,
+                electricityDualRateNight = 1764,
+                dualFuelSingleRateElectricity = 2900,
+                dualFuelSingleRateGas = 12000
+            )
         )
 }

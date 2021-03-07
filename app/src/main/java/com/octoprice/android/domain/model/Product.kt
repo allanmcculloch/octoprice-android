@@ -16,5 +16,8 @@ data class Product(
     val isRestricted: Boolean,
     val isTracker: Boolean,
     val isVariable: Boolean,
-    val term: Int?
+    val term: Int?,
+    val sampleProductRates : SampleProductRates? = null,
+    val dualRegisterElectricity: TariffsDualRegisterElectricity? = null,
+    val singleRegisterElectricity: TariffsSingleRegisterElectricity? = null
 ) : Serializable

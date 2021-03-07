@@ -6,8 +6,11 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingBottom="50dp"
-        tools:context=".ui.products.ProductsFragment">
+        android:paddingBottom="70dp"
+        android:paddingTop="10dp"
+        android:paddingHorizontal="20dp"
+        tools:context=".ui.products.ProductsFragment"
+        >
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productsList"

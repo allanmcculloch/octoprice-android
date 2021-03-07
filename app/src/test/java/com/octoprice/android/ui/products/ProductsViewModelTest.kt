@@ -3,11 +3,10 @@ package com.octoprice.android.ui.products
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.jraska.livedata.test
 import com.octoprice.android.SampleData
-import com.octoprice.android.adapter.RecyclerViewItem
 import com.octoprice.android.domain.usecase.GetProductsUseCase
 import io.mockk.coEvery
 import io.mockk.mockk
-import junit.framework.Assert.assertEquals
+import junit.framework.TestCase.assertEquals
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.test.resetMain

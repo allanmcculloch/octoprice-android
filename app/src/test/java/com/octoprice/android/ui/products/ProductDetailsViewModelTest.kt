@@ -7,6 +7,7 @@ import com.octoprice.android.domain.usecase.GetProductUseCase
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.newSingleThreadContext
 import kotlinx.coroutines.test.resetMain
 import kotlinx.coroutines.test.setMain
@@ -15,6 +16,7 @@ import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
 
+@ExperimentalCoroutinesApi
 class ProductDetailsViewModelTest {
     private lateinit var getProductUseCase: GetProductUseCase
     private lateinit var productDetailsViewModel: ProductDetailsViewModel

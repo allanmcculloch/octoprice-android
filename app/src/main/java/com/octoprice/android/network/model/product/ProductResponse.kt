@@ -18,5 +18,7 @@ data class ProductResponse(
     val sample_consumption: SampleConsumption?,
     val tariffs_active_at: String?,
     val links: List<Link>?,
-    val term: Int?
+    val term: Int?,
+    val dual_register_electricity_tariffs: DualRegisterElectricityTariffs? = null,
+    val single_register_electricity_tariffs: SingleRegisterElectricityTariffs? = null
 )

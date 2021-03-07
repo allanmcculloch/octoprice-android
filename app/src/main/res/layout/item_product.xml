@@ -6,21 +6,23 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="80dp"
+        android:onClick="@{() -> viewModel.onProductClick(product)}"
         android:padding="10dp"
-        android:onClick="@{() -> viewModel.onProductClick(product)}">
+        android:background="@drawable/border"
+        android:layout_marginVertical="5dp">
 
         <TextView
             android:id="@+id/productName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:text="@{product.fullName}"
-            />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <data>
+
         <variable
             name="product"
             type="com.octoprice.android.domain.model.Product" />
