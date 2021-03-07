@@ -1,5 +1,7 @@
 package com.octoprice.android.domain.model
 
+import java.io.Serializable
+
 data class Product(
     val availableFrom: String?,
     val availableTo: String?,
@@ -15,4 +17,4 @@ data class Product(
     val isTracker: Boolean,
     val isVariable: Boolean,
     val term: Int?
-)
+) : Serializable

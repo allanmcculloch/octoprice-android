@@ -1,21 +1,22 @@
 package com.octoprice.android.mappers
 
-import com.octoprice.android.network.model.product.ProductResponse
-import junit.framework.Assert.assertEquals
+import com.octoprice.android.SampleData
+import junit.framework.TestCase.assertEquals
 import org.junit.Test
-
 import org.junit.Before
 
 class ProductMapperTest {
 
-    lateinit var productMapper : ProductMapper
+    lateinit var productMapper: ProductMapper
+
     @Before
     fun setup() {
         productMapper = ProductMapper()
     }
 
     @Test
-    fun mapsCorrectly() {
+    fun `toDomain() maps product correctly`() {
+        val sampleProductResponse = SampleData.singleProductResponse
         val product = productMapper.toDomain(sampleProductResponse)
 
         assertEquals(sampleProductResponse.available_from, product.availableFrom)
@@ -34,24 +35,12 @@ class ProductMapperTest {
         assertEquals(sampleProductResponse.term, product.term)
     }
 
-    val sampleProductResponse = ProductResponse(
-        "2021-02-16T00:00:00Z",
-        null,
-        "AFFECT_ENERGY",
-        "AFFECT-FIX-12M-21-02-16",
-        "This tariff features 100% renewable electricity and fixes your unit rates and standing charge for 12 months. There are no exit fees, so if you change your mind, you're in control.",
-        null,
-        "Affect 12M Fixed",
-        "Affect 12M Fixed February 2021 v1",
-        false,
-        true,
-        false,
-        true,
-        false,
-        false,
-        null,
-        null,
-        null,
-        12
-    )
+    @Test
+    fun `toDomain() maps products list correctly`() {
+        val sampleProductsResponse = SampleData.productsResponse
+        val products = productMapper.toDomain(sampleProductsResponse.products)
+
+        assertEquals(SampleData.products, products)
+    }
+
 }

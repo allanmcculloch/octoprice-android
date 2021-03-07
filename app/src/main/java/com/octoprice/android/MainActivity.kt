@@ -17,9 +17,17 @@ class MainActivity : AppCompatActivity() {
 
         val navController = findNavController(R.id.nav_host_fragment)
 
-        val appBarConfiguration = AppBarConfiguration(setOf(
-                R.id.navigation_products, R.id.navigation_industry, R.id.navigation_settings))
+        val appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.navigation_products, R.id.navigation_industry, R.id.navigation_settings
+            )
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        val navController = findNavController(R.id.nav_host_fragment)
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }

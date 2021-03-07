@@ -9,7 +9,33 @@
         android:id="@+id/navigation_products"
         android:name="com.octoprice.android.ui.products.ProductsFragment"
         android:label="@string/title_products"
-        tools:layout="@layout/fragment_products" />
+        tools:layout="@layout/fragment_products">
+
+        <action
+            android:id="@+id/products_to_productDetails"
+            app:destination="@id/navigation_product_details"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim"
+            app:popUpTo="@id/navigation_products">
+            <argument
+                android:name="product"
+                app:argType="com.octoprice.android.domain.model.Product" />
+        </action>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_product_details"
+        android:name="com.octoprice.android.ui.products.ProductDetailsFragment"
+        android:label="@string/title_product_details"
+        tools:layout="@layout/fragment_product_details">
+        <argument
+            android:name="product"
+            app:argType="com.octoprice.android.domain.model.Product" />
+
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_industry"
@@ -22,4 +48,5 @@
         android:name="com.octoprice.android.ui.settings.SettingsFragment"
         android:label="@string/title_settings"
         tools:layout="@layout/fragment_settings" />
+
 </navigation>

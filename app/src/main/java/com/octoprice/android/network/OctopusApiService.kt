@@ -8,7 +8,7 @@ class OctopusApiService {
     private val httpClient: OkHttpClient = OkHttpClient.Builder()
         .build()
 
-    val octopusClient = Retrofit.Builder()
+    val octopusClient: OctopusApi = Retrofit.Builder()
         .baseUrl(Constants.API_URL)
         .client(httpClient)
         .addConverterFactory(MoshiConverterFactory.create())

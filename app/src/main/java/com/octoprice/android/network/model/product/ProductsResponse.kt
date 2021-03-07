@@ -6,6 +6,6 @@ data class ProductsResponse(
     val count: Int?,
     val next: String?,
     val previous: Any?,
-    @field:Json(name = "results") val products: List<ProductResponse>?
+    @field:Json(name = "results") val products: List<ProductResponse>
 )
 
