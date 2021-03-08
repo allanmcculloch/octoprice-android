@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class IndustryViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is industry Fragment"
+        value = "To show industry grid supply points"
     }
     val text: LiveData<String> = _text
 }

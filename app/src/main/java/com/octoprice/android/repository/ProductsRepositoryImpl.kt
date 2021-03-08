@@ -13,13 +13,13 @@ class ProductsRepositoryImpl(
     override suspend fun getProducts(): List<Product> = withContext(Dispatchers.IO) {
         val productsResponse = octopusApiService.octopusClient.getProducts()
 
-        val products = productsResponse.body()?.products.orEmpty()
+        val products = productsResponse.body()?.products.orEmpty()  // TODO: Handle success / error
 
         productMapper.toDomain(products)
     }
 
     override suspend fun getProduct(code: String): Product = withContext(Dispatchers.IO) {
-        val product = octopusApiService.octopusClient.getProduct(code).body()
+        val product = octopusApiService.octopusClient.getProduct(code).body() // TODO: Handle success / error
 
         productMapper.toDomain(product!!)
     }
