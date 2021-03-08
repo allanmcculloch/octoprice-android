@@ -39,22 +39,24 @@ This is a a simple Android app to display products and prices from the Octopus E
 - Add further error handling
 - Add caching layer to repository
 - Add settings 
+- Use partner endpoints on Octopus Energy API given API key (e.g. show consumption for a meter)
 
 **Screenshots**
 
 ![product_list](https://user-images.githubusercontent.com/2723637/110288061-5a0a6f80-7fdf-11eb-91c1-288b611aab65.png)
 
-![produt_detail](https://user-images.githubusercontent.com/2723637/110288092-655d9b00-7fdf-11eb-8f03-74ca27bbed22.png)
+![product_detail](https://user-images.githubusercontent.com/2723637/110323445-87b9dd80-800c-11eb-8587-bf4169378fd3.png)
 
 ![industry](https://user-images.githubusercontent.com/2723637/110288107-6abae580-7fdf-11eb-8609-329533e54faa.png)
+
 
 
 
 **When loading product details page**
 
 
+![product_detail_loading](https://user-images.githubusercontent.com/2723637/110323422-812b6600-800c-11eb-860d-7e076787a2c1.png)
 
-![product_detail_loading](https://user-images.githubusercontent.com/2723637/110288080-5f67ba00-7fdf-11eb-869b-80156d803bec.png)
 
 
 
