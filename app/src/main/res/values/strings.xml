@@ -12,7 +12,8 @@
     <string name="day_unit_price">Day unit rate (p/kwh)</string>
     <string name="term">Term</string>
     <string name="green_energy">Green Energy?</string>
-    <string name="green">Green:</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
+    <string name="not_green_energy_product">Not Green Energy Product</string>
+    <string name="green_energy_product">Green energy product</string>
 </resources>

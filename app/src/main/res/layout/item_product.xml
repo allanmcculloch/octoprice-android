@@ -30,6 +30,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productName"
+            android:contentDescription="@string/green_energy_product"
             android:paddingTop="10dp"
             app:tint="@color/green"
             android:visibility="@{product.green}" />
@@ -41,6 +42,7 @@
             android:src="@drawable/ic_eco_24dp"
             android:paddingTop="10dp"
             android:visibility="@{! product.green}"
+            android:contentDescription="@string/not_green_energy_product"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productName"
