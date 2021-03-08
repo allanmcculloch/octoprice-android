@@ -10,9 +10,9 @@ This is a a simple Android app to display products and prices from the Octopus E
 
 **The following functionality is provided**
 
-- View a list of products
-- View if a product uses green energy
+- View a list of energy products
 - View details of the product including prices (if available and limited to grid supply point group A / electricity)
+- View if a product is green
 - Check a Grid Supply Point group based on a post code
 
 **Built using:**
