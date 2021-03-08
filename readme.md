@@ -44,12 +44,14 @@ Screenshots
 
 ![product_list](https://user-images.githubusercontent.com/2723637/110288061-5a0a6f80-7fdf-11eb-91c1-288b611aab65.png)
 
-![product_detail_loading](https://user-images.githubusercontent.com/2723637/110288080-5f67ba00-7fdf-11eb-869b-80156d803bec.png)
-
 ![produt_detail](https://user-images.githubusercontent.com/2723637/110288092-655d9b00-7fdf-11eb-8f03-74ca27bbed22.png)
 
 ![industry](https://user-images.githubusercontent.com/2723637/110288107-6abae580-7fdf-11eb-8609-329533e54faa.png)
 
+
+When loading product details page
+
+![product_detail_loading](https://user-images.githubusercontent.com/2723637/110288080-5f67ba00-7fdf-11eb-869b-80156d803bec.png)
 
 
 
