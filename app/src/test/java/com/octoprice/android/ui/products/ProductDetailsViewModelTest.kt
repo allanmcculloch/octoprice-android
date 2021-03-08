@@ -56,4 +56,18 @@ class ProductDetailsViewModelTest {
         productLiveData.awaitNextValue()
         productLiveData.assertValue(SampleData.updatedProduct)
     }
+
+    @Test
+    fun `loadData() emits loading true while loading`() {
+        val loadingLiveData = productDetailsViewModel.loading.test()
+
+        loadingLiveData.assertNoValue()
+
+        productDetailsViewModel.loadProduct(SampleData.singleProduct)
+
+        loadingLiveData.awaitValue()
+        loadingLiveData.assertValue(true)
+        loadingLiveData.awaitNextValue()
+        loadingLiveData.assertValue(false)
+    }
 }

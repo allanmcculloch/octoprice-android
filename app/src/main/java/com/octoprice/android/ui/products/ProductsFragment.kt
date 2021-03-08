@@ -12,17 +12,19 @@ import org.koin.android.viewmodel.ext.android.viewModel
 
 class ProductsFragment : Fragment() {
     private val productsViewModel: ProductsViewModel by viewModel()
+    private lateinit var binding: FragmentProductsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return FragmentProductsBinding.inflate(inflater, container, false)
+        binding = FragmentProductsBinding.inflate(inflater, container, false)
             .also<@NonNull FragmentProductsBinding> {
                 it.viewModel = productsViewModel
                 it.lifecycleOwner = viewLifecycleOwner
-            }.root
+            }
+        return binding.root
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
@@ -31,10 +33,25 @@ class ProductsFragment : Fragment() {
         productsViewModel.navigateToProductDetail.observe(viewLifecycleOwner, {
             findNavController().navigate(ProductsFragmentDirections.productsToProductDetails(it))
         })
+
+        handlePullToRefresh()
+    }
+
+    private fun handlePullToRefresh() {
+        binding.pullToRefresh.setOnRefreshListener {
+            productsViewModel.loadProducts()
+        }
+
+        productsViewModel.products.observe(viewLifecycleOwner,
+            {
+                binding.pullToRefresh.isRefreshing = false
+            }
+        )
     }
 
     override fun onResume() {
         super.onResume()
+        binding.pullToRefresh.isRefreshing = true
         productsViewModel.loadProducts()
     }
 }

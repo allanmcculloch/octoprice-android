@@ -13,7 +13,6 @@ import org.junit.Test
 import retrofit2.Response
 
 class ProductsRepositoryTest {
-
     private lateinit var octopusApiServiceMock: OctopusApiService
     private lateinit var productMapperMock: ProductMapper
 

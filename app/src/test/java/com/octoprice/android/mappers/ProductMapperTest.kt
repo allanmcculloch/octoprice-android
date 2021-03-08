@@ -40,13 +40,30 @@ class ProductMapperTest {
         val sampleProductResponse = SampleData.singleProductResponse
         val product = productMapper.toDomain(sampleProductResponse)
 
-        assertEquals(sampleProductResponse.sample_consumption?.electricity_single_rate?.electricity_standard, product.sampleProductRates?.electricitySingleRate)
+        val expectedSampleConsumption = sampleProductResponse.sample_consumption
 
-        assertEquals(sampleProductResponse.sample_consumption?.electricity_dual_rate?.electricity_day, product.sampleProductRates?.electricityDualRateDay)
-        assertEquals(sampleProductResponse.sample_consumption?.electricity_dual_rate?.electricity_night, product.sampleProductRates?.electricityDualRateNight)
+        assertEquals(
+            expectedSampleConsumption?.electricity_single_rate?.electricity_standard,
+            product.sampleProductRates?.electricitySingleRate
+        )
 
-        assertEquals(sampleProductResponse.sample_consumption?.dual_fuel_single_rate?.electricity_standard, product.sampleProductRates?.dualFuelSingleRateElectricity)
-        assertEquals(sampleProductResponse.sample_consumption?.dual_fuel_single_rate?.gas_standard, product.sampleProductRates?.dualFuelSingleRateGas)
+        assertEquals(
+            expectedSampleConsumption?.electricity_dual_rate?.electricity_day,
+            product.sampleProductRates?.electricityDualRateDay
+        )
+        assertEquals(
+            expectedSampleConsumption?.electricity_dual_rate?.electricity_night,
+            product.sampleProductRates?.electricityDualRateNight
+        )
+
+        assertEquals(
+            expectedSampleConsumption?.dual_fuel_single_rate?.electricity_standard,
+            product.sampleProductRates?.dualFuelSingleRateElectricity
+        )
+        assertEquals(
+            expectedSampleConsumption?.dual_fuel_single_rate?.gas_standard,
+            product.sampleProductRates?.dualFuelSingleRateGas
+        )
     }
 
     @Test
@@ -54,12 +71,27 @@ class ProductMapperTest {
         val sampleProductResponse = SampleData.singleProductResponse
         val product = productMapper.toDomain(sampleProductResponse)
 
-        assertEquals(sampleProductResponse.single_register_electricity_tariffs?._A?.direct_debit_monthly?.standard_unit_rate_inc_vat, product.singleRegisterElectricity?.standardUnitRate)
-        assertEquals(sampleProductResponse.single_register_electricity_tariffs?._A?.direct_debit_monthly?.standing_charge_inc_vat, product.singleRegisterElectricity?.standingCharge)
+        assertEquals(
+            sampleProductResponse.single_register_electricity_tariffs?._A?.direct_debit_monthly?.standard_unit_rate_inc_vat,
+            product.singleRegisterElectricity?.standardUnitRate
+        )
+        assertEquals(
+            sampleProductResponse.single_register_electricity_tariffs?._A?.direct_debit_monthly?.standing_charge_inc_vat,
+            product.singleRegisterElectricity?.standingCharge
+        )
 
-        assertEquals(sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.day_unit_rate_inc_vat, product.dualRegisterElectricity?.dayUnitRate)
-        assertEquals(sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.night_unit_rate_inc_vat, product.dualRegisterElectricity?.nightUnitRate)
-        assertEquals(sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.standing_charge_inc_vat, product.dualRegisterElectricity?.standingCharge)
+        assertEquals(
+            sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.day_unit_rate_inc_vat,
+            product.dualRegisterElectricity?.dayUnitRate
+        )
+        assertEquals(
+            sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.night_unit_rate_inc_vat,
+            product.dualRegisterElectricity?.nightUnitRate
+        )
+        assertEquals(
+            sampleProductResponse.dual_register_electricity_tariffs?._A?.direct_debit_monthly?.standing_charge_inc_vat,
+            product.dualRegisterElectricity?.standingCharge
+        )
     }
 
     @Test

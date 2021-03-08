@@ -22,12 +22,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_eco_24dp"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productName"
             android:paddingTop="10dp"
             app:tint="@color/green"
@@ -37,13 +38,13 @@
             android:id="@+id/notGreen"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/ic_cross_24dp"
+            android:src="@drawable/ic_eco_24dp"
             android:paddingTop="10dp"
             android:visibility="@{! product.green}"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/productName"
-            app:tint="@color/red" />
+            app:tint="@color/lightgrey" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

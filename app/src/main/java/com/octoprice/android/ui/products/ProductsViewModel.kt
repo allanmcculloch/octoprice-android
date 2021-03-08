@@ -15,6 +15,8 @@ import com.octoprice.android.util.SingleLiveEvent
 class ProductsViewModel(private val getProductsUseCase: GetProductsUseCase) : ViewModel() {
     private val _products = MutableLiveData<List<RecyclerViewItem>>()
     val products: LiveData<List<RecyclerViewItem>> = _products
+
+
     val navigateToProductDetail: SingleLiveEvent<Product> = SingleLiveEvent()
 
     fun loadProducts() {

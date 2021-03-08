@@ -12,6 +12,9 @@ class ProductDetailsViewModel(private val getProductUseCase: GetProductUseCase) 
     private val _product: MutableLiveData<Product> = MutableLiveData()
     val product: LiveData<Product> = _product
 
+    private val _loading : MutableLiveData<Boolean> = MutableLiveData()
+    val loading: LiveData<Boolean> = _loading
+
     fun loadProduct(product: Product) {
         _product.postValue(product)
 
@@ -20,8 +23,10 @@ class ProductDetailsViewModel(private val getProductUseCase: GetProductUseCase) 
 
     private fun getAdditionalProductDataFromApi(productCode: String) {
         viewModelScope.launch {
+            _loading.value = true
             val product = getProductUseCase(productCode)
             _product.postValue(product)
+            _loading.value = false
         }
     }
 }
