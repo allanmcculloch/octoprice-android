@@ -28,6 +28,8 @@ And a few UI tests using Espresso (note these are using live data and need MockW
 Possible future improvements / ToDos
 
 - Improve UI styling 
+- Allow filtering by green energy / business only etc.
+- Add further tariff mapping for gas etc.
 - Add additional list showing industry grid supply points
 - In memory mock http server for UI Tests 
 - Add error handling
