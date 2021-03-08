@@ -71,4 +71,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     androidTestImplementation "io.mockk:mockk-android:$mock_version"
+    androidTestImplementation 'androidx.test:runner:1.4.0-alpha04'
+    androidTestImplementation 'com.android.support.test:rules:1.0.2'
+    androidTestImplementation "com.android.support.test.espresso:espresso-contrib:3.0.2"
+
 }
