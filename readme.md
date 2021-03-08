@@ -2,20 +2,20 @@
 
 This is a a simple Android app to display products and prices from the Octopus Energy API
 
-It uses the following public endpoints
+**It uses the following public endpoints**
 
 - https://api.octopus.energy/v1/products
 - https://api.octopus.energy/v1/products/{code}
 - https://api.octopus.energy/v1/industry/grid-supply-points
 
-The following functionality is provided
+**The following functionality is provided**
 
 - View a list of products
 - View if a product uses green energy
 - View details of the product including prices (if available and limited to grid supply point group A / electricity)
 - Check a Grid Supply Point group based on a post code
 
-Built using:
+**Built using:**
 
 - Koin (Dependency Injection)
 - MVVM / View Models
@@ -29,7 +29,7 @@ Built using:
 - Unit testing with JUnit, Mockk, Live-data helpers
 - Android (UI) tests using Espresso (TODO: Setup MockWebServer or WireMock as currently using prod data)
 
-Possible future improvements / ToDos
+**Possible future improvements / ToDos**
 
 - Improve UI styling 
 - Allow filtering by green energy / business only etc.
@@ -40,7 +40,7 @@ Possible future improvements / ToDos
 - Add caching layer to repository
 - Add settings 
 
-Screenshots
+**Screenshots**
 
 ![product_list](https://user-images.githubusercontent.com/2723637/110288061-5a0a6f80-7fdf-11eb-91c1-288b611aab65.png)
 
@@ -49,7 +49,10 @@ Screenshots
 ![industry](https://user-images.githubusercontent.com/2723637/110288107-6abae580-7fdf-11eb-8609-329533e54faa.png)
 
 
-When loading product details page
+
+**When loading product details page**
+
+
 
 ![product_detail_loading](https://user-images.githubusercontent.com/2723637/110288080-5f67ba00-7fdf-11eb-869b-80156d803bec.png)
 
