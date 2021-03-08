@@ -9,12 +9,12 @@
     <string name="standing_charge">Standing charge (p/day)</string>
     <string name="electricity_dual_register">Electricity Dual Register Rates</string>
     <string name="night_unit_price">Night unit rate (p/kWh)</string>
-    <string name="day_unit_price">Day unit rate (p/kwh)</string>
+    <string name="day_unit_price">Day unit rate (p/kWh)</string>
     <string name="term">Term</string>
     <string name="green_energy">Green Energy?</string>
     <string name="no">No</string>
     <string name="yes">Yes</string>
-    <string name="not_green_energy_product">Not Green Energy Product</string>
+    <string name="not_green_energy_product">Not a green energy product</string>
     <string name="green_energy_product">Green energy product</string>
     <string name="search">Search</string>
     <string name="enter_post_code">Enter post code</string>
