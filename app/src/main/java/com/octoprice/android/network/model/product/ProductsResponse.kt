@@ -5,7 +5,7 @@ import com.squareup.moshi.Json
 data class ProductsResponse(
     val count: Int?,
     val next: String?,
-    val previous: Any?,
+    val previous: String?,
     @field:Json(name = "results") val products: List<ProductResponse>
 )
 

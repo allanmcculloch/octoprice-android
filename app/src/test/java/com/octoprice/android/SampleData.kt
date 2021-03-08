@@ -2,6 +2,8 @@ package com.octoprice.android
 
 import com.octoprice.android.domain.model.Product
 import com.octoprice.android.domain.model.SampleProductRates
+import com.octoprice.android.network.model.gridsupplypoint.GridSupplyPointGroupId
+import com.octoprice.android.network.model.gridsupplypoint.GridSupplyPointsResponse
 import com.octoprice.android.network.model.product.*
 
 object SampleData {
@@ -158,4 +160,22 @@ object SampleData {
                 dualFuelSingleRateGas = 12000
             )
         )
+
+    val gridSupplyPointsResponseSingle =
+        GridSupplyPointsResponse(1, null, null, listOf(GridSupplyPointGroupId("_A")))
+
+    val gridSupplyPointsResponseMultiple =
+        GridSupplyPointsResponse(
+            3,
+            null,
+            null,
+            listOf(
+                GridSupplyPointGroupId("_A"),
+                GridSupplyPointGroupId("_C"),
+                GridSupplyPointGroupId("_G")
+            )
+        )
+
+    val gridSupplyPointsResponseNone =
+        GridSupplyPointsResponse(0, null, null, listOf())
 }

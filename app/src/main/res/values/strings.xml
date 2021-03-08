@@ -16,4 +16,7 @@
     <string name="yes">Yes</string>
     <string name="not_green_energy_product">Not Green Energy Product</string>
     <string name="green_energy_product">Green energy product</string>
+    <string name="search">Search</string>
+    <string name="enter_post_code">Enter post code</string>
+    <string name="find_grid_supply_point_title">Find grid supply point</string>
 </resources>

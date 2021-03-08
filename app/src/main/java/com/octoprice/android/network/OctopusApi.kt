@@ -6,6 +6,7 @@ import com.octoprice.android.network.model.product.ProductsResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface OctopusApi {
     @GET("products")
@@ -15,5 +16,5 @@ interface OctopusApi {
     suspend fun getProduct(@Path(value = "code") code: String): Response<ProductResponse>
 
     @GET("industry/grid-supply-points")
-    suspend fun getIndustryGridSupplyPoints(): Response<GridSupplyPointsResponse>
+    suspend fun getIndustryGridSupplyPoints(@Query(value = "postcode") postCode: String): Response<GridSupplyPointsResponse>
 }
