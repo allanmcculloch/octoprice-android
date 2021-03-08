@@ -9,12 +9,11 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
-            android:paddingHorizontal="20dp"
-            android:paddingBottom="70dp"
-            android:layout_marginTop="10dp"
             android:layout_marginHorizontal="10dp"
-            >
+            android:layout_marginTop="10dp"
+            android:paddingHorizontal="20dp"
+            android:paddingTop="20dp"
+            android:paddingBottom="70dp">
 
             <TextView
                 android:id="@+id/productName"
@@ -38,6 +37,37 @@
 
 
             <TextView
+                android:id="@+id/greenTitle"
+                android:layout_width="195dp"
+                android:layout_height="wrap_content"
+                android:paddingBottom="10dp"
+                android:text="Green Energy?"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/description" />
+
+            <ImageView
+                android:id="@+id/green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_eco_24dp"
+                android:visibility="@{viewModel.product.green}"
+                android:paddingBottom="10dp"
+                app:layout_constraintStart_toEndOf="@+id/greenTitle"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:tint="@color/green" />
+
+            <ImageView
+                android:id="@+id/notGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cross_24dp"
+                android:paddingBottom="10dp"
+                android:visibility="@{! viewModel.product.green}"
+                app:layout_constraintStart_toEndOf="@+id/greenTitle"
+                app:layout_constraintTop_toBottomOf="@+id/description"
+                app:tint="@color/red" />
+
+            <TextView
                 android:id="@+id/termTitle"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
@@ -45,7 +75,7 @@
                 android:paddingBottom="20dp"
                 android:text="@string/term"
                 app:layout_constraintLeft_toLeftOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+                app:layout_constraintTop_toBottomOf="@+id/greenTitle" />
 
             <TextView
                 android:id="@+id/term"
@@ -55,12 +85,13 @@
                 android:paddingBottom="20dp"
                 android:text='@{viewModel.product.term.toString() ?? " - "}'
                 app:layout_constraintStart_toEndOf="@+id/termTitle"
-                app:layout_constraintTop_toBottomOf="@+id/description" />
+                app:layout_constraintTop_toBottomOf="@+id/greenTitle" />
 
             <TextView
                 android:id="@+id/electricitySingleRegisterHeader"
                 style="@style/TextAppearance.MaterialComponents.Subtitle2"
                 android:layout_width="wrap_content"
+                android:paddingVertical="10dp"
                 android:layout_height="wrap_content"
                 android:text="@string/electricity_single_register"
                 app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +134,7 @@
                 style="@style/TextAppearance.MaterialComponents.Subtitle2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingTop="10dp"
+                android:paddingVertical="10dp"
                 android:text="@string/electricity_dual_register"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/singleRegisterElectricityStandingCharge" />
